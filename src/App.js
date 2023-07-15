@@ -1,12 +1,15 @@
-function App() {
+import { useState } from "react";
 
-  function handleOnClick(e){
-    console.log(e.target.name)
+function App() {
+  console.log('Update!'); /* 업뎃될때마다 호출되는 메시지 */
+  const [count, setCount] = useState(0);
+  const onIncrease = () => {
+    setCount(count+1);
   }
   return (
     <>
-      <button name="A" onClick={handleOnClick}>click btn</button>
-      <button name="B" onClick={handleOnClick}>click btn</button>
+      <h2>{count}</h2>
+      <button onClick={onIncrease}>+</button>
     </>
   );
 }
