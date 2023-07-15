@@ -1,15 +1,18 @@
 import { useState } from "react";
 
 function App() {
-  console.log('Update!'); /* 업뎃될때마다 호출되는 메시지 */
-  const [count, setCount] = useState(0);
-  const onIncrease = () => {
-    setCount(count+1);
+  const [option, setOption] = useState("");
+  const handle = (e) => {
+    setOption(e.target.value);
   }
   return (
     <>
-      <h2>{count}</h2>
-      <button onClick={onIncrease}>+</button>
+      <select value={option} name="product" id="product" onChange={handle}>
+        <option key={"blue"}>blue</option>
+        <option key={"red"}>red</option>
+        <option key={"green"}>green</option>
+      </select>
+      <p>{option}</p>
     </>
   );
 }
