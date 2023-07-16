@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <input value={text} onChange={handleOnChange} type="text" />
-      <button onClick={handleOnClick}>작성 완료</button>
+      <button onClick={handleOnClick}>작성 완료22</button>
     </div>
   );
 }
